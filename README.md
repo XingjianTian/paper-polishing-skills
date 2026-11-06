@@ -1,21 +1,23 @@
-# Paper Polishing Skills · 论文打磨技能
+# Paper Polishing Skills
 
-四个可独立使用的中文 AI 技能，帮助检查论文论证、忠实润色、核验证据和准备投稿返修材料。
+**English (primary)** · [简体中文](README.zh-CN.md)
 
-**按需选一个；明确需要多项产出时再组合。** 短段润色无需跑整篇审计，也无需创建项目账本或启动完整科研流程。
+Four focused AI skills for academic writing: check arguments, edit faithfully, verify evidence, and prepare submission or revision materials.
 
-## 四个核心技能
+**Use one skill for the task at hand. Combine skills only when you explicitly need multiple deliverables.** A paragraph edit does not need a full manuscript audit or an end-to-end research workflow.
 
-| 技能 | 适合解决的问题 | 示例请求 |
+## The four skills
+
+| Skill | Use it to | Example request |
 | --- | --- | --- |
-| [paper-argument-check](paper-argument-check/SKILL.md) | 论证是否连贯，问题、方法、结果和贡献是否对齐 | “检查引言哪里没有回答研究问题，先不重写。” |
-| [paper-faithful-edit](paper-faithful-edit/SKILL.md) | 保留原意的润色、翻译与压缩；按明确依据纠错 | “摘要压到250词，保留数字、术语和结论强度。” |
-| [paper-evidence-check](paper-evidence-check/SKILL.md) | 数据或引文能否支持主张，书目与数字是否一致 | “核对这句引用：DOI正确是否足以支持17%的结论？” |
-| [paper-submission-revision](paper-submission-revision/SKILL.md) | 根据真实材料写投稿文件、逐条审稿回复 | “根据审稿意见和修改稿起草回复，未决定的项目另列。” |
+| [paper-argument-check](paper-argument-check/SKILL.md) | Check argument structure and alignment between questions, methods, results, and contributions | “Identify where the introduction fails to address the research question. Do not rewrite it yet.” |
+| [paper-faithful-edit](paper-faithful-edit/SKILL.md) | Polish, translate, or shorten text while preserving meaning; correct facts only with authorization and evidence | “Shorten this abstract to 250 words. Preserve numbers, terminology, and claim strength.” |
+| [paper-evidence-check](paper-evidence-check/SKILL.md) | Check whether results or citations support a claim, and reconcile bibliographic or numerical discrepancies | “Does this citation support the claimed 17% reduction, or does the DOI only identify the paper?” |
+| [paper-submission-revision](paper-submission-revision/SKILL.md) | Prepare submission documents and reviewer responses grounded in actual materials | “Draft responses from these comments and revisions. List undecided items separately.” |
 
-## 安装与使用
+## Install and use
 
-每个文件夹都是独立技能，入口为 `SKILL.md`。可直接让支持读取文件的 AI 助手按相应文件执行；在 Codex 中，也可把选中的文件夹复制到个人技能目录。
+Each folder is a standalone skill with a `SKILL.md` entry point. Ask a file-capable assistant to follow that file, or copy the skill you want into your Codex skills directory:
 
 ```sh
 git clone https://github.com/XingjianTian/paper-polishing-skills.git
@@ -24,30 +26,35 @@ mkdir -p ~/.codex/skills
 cp -R paper-faithful-edit ~/.codex/skills/
 ```
 
-按客户端实际加载方式刷新或开启新聊天，然后点名调用，并提供待处理文本：
+Refresh skill discovery or start a new chat as appropriate for your client, then invoke the skill with your text:
 
 ```text
-使用 $paper-faithful-edit 润色下面的英文摘要。
-只返回正文；保留数字、否定、术语、英式拼写和结论强度。
-[粘贴摘要]
+Use $paper-faithful-edit to polish the abstract below.
+Return only the revised text. Preserve numbers, negation, terminology,
+British spelling, and the strength of the conclusions.
+[paste abstract]
 ```
 
-需要核查与润色两项产出时，明确写出两项要求，分别交付。作者已指定正确数值、只需纠正并润色时，单用 `paper-faithful-edit` 即可。完整选择示例见 [使用说明](使用说明.md)。
+If you need both evidence checking and editing, request both deliverables and keep their outputs separate. If you have already confirmed the correct value and only need the text corrected and polished, `paper-faithful-edit` is enough.
 
-## 执行边界
+The installed instructions are in English. They do **not** require English output: follow the user's requested language, and preserve the manuscript's language unless translation is requested. [Chinese reference translations](docs/zh-CN) are secondary reading copies, not additional installable skills. See the [Chinese usage guide](使用说明.md) for further routing examples.
 
-- 忠实编辑保留原语言与主张；翻译或事实纠错需要明确请求和依据，证据疑点另列。
-- 书目匹配仅确认文献身份；判断论点支持程度还需要原文、结果表格或研究设计。
-- 数值不同先核对样本与统计口径，材料不足就指出缺什么，不猜正确值。
-- 审稿回复只写已核实的修改；内部待办与作者未决事项单列，不虚构完成情况或承诺。
-- 外部检索、全文访问和政策核对取决于运行助手可用的工具；这些文件本身不提供数据库接口。
+## Working boundaries
 
-## 来源与整理方式
+- Faithful editing preserves the original language, attribution, numbers, and claim strength. Keep evidence concerns separate; change facts only with explicit authorization and a clear basis.
+- Matching a bibliographic record identifies a work. Establishing support for a claim requires the relevant source text, results, or study design.
+- Before calling different numbers a contradiction, check whether they describe the same sample and statistical definition. Report missing information rather than guessing a correct value.
+- Reviewer responses distinguish verified changes, explicitly planned changes, and supported disagreements. Keep internal tasks and undecided items outside the response draft; do not invent completed work or commitments.
+- External searches, full-text access, and policy checks depend on the assistant's available tools. These instruction files do not provide database access themselves.
 
-本项目参考 Mohd Shahizan Othman 的 [Polishing Your Draft Article Using AI Tools](https://drshahizan.github.io/polishing-ai/) 工作坊材料，进行了中文归纳、任务重组并补充执行边界。每个技能都保留具体参考页面，汇总见[来源索引](使用说明.md#来源索引)。
+## Sources and adaptation
 
-本项目为独立整理，非原站官方技能，非整站镜像或逐字译文。原站材料权利归其各自权利人；仓库公开不代表为第三方材料重新授权。
+Adapted from Mohd Shahizan Othman's [Polishing Your Draft Article Using AI Tools](https://drshahizan.github.io/polishing-ai/) workshop materials. The project reorganizes the material into focused tasks and adds practical execution boundaries. Each skill links to its specific sources.
 
-## 验证
+This is an independent adaptation, not an official skill collection, a site mirror, or a verbatim translation. Rights to third-party materials remain with their respective owners; publishing this repository does not relicense those materials.
 
-四个技能均经过格式校验，并通过局部行为用例检查选用、授权纠错、缺证处理和返修输出。经网页 Pro 审阅后做了定向修正。验证针对给定材料下的执行表现，不构成论文质量、录用结果或客户端自动发现能力的保证。
+## Validation
+
+The original Chinese instructions received web Pro review, targeted corrections, and behavioral spot checks covering skill selection, authorized corrections, missing evidence, and revision responses. The English edition translates those instructions and is checked separately for format and translation consistency. That prior review does not constitute a separate Pro review of the English wording.
+
+These checks do not guarantee publication quality, acceptance, client-side automatic discovery, or access to real bibliographic databases.

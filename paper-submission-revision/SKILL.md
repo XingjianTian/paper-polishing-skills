@@ -1,38 +1,40 @@
 ---
 name: paper-submission-revision
-description: 根据目标期刊要求准备投稿检查、投稿信、AI 使用说明，或根据真实审稿意见与已完成或作者明确拟修改的内容起草逐条回复；作者未决定的事项列为待办，不执行投稿。
+description: Prepare submission checks, cover letters, and AI-use disclosures against a target journal's requirements, or draft point-by-point responses from real reviewer comments and completed or explicitly planned revisions. List undecided matters as author tasks. Do not submit the manuscript.
 ---
 
-# 投稿准备与返修回复
+# Submission Preparation and Revision Responses
 
-按当前请求选择“投稿准备”或“返修回复”，无需串行完成全部模式。生成可审阅材料，不自动投稿、发送或对外声明。
+Choose submission preparation or revision responses according to the current request; do not require every mode in sequence. Produce reviewable materials without automatically submitting, sending, or making external declarations.
 
-## 投稿准备
+## Submission preparation
 
-- 以目标期刊当前官方作者指南、范围和相关政策为准。联网读取或使用用户提供的政策文本，记录来源和核查日期；没有政策时把相关项标为待确认。
-- 检查与请求相关的字数、章节、图表、匿名要求、补充材料，以及伦理、资助、利益冲突、数据可用性、贡献声明等。区分“不适用”和“缺失”，不要求所有研究都有相同声明。
-- 期刊适配判断须对照实际范围和稿件贡献。角色提示中的“编辑”只用于模拟视角，不能作为真实编辑决定或录用保证。
-- 投稿信简洁说明问题、真实贡献和期刊适配；原创性、全体作者批准等声明只能依据作者确认，未确认项留作待确认。
-- AI 使用说明忠实记录实际工具、已知版本、用途、涉及部分及作者审核情况。不得把起草、分析或图像生成伪写成仅做语言润色；不得编造版本。披露要求按目标期刊政策判断，不硬编码出版社规则。
+- Use the target journal's current official author guidelines, scope, and relevant policies. Read them online or use policy text supplied by the user, recording the source and check date. Without a policy, mark the relevant items as pending confirmation.
+- Check only the requested word limits, sections, figures, tables, anonymization, supplementary materials, and ethics, funding, competing-interest, data-availability, or contribution statements. Distinguish “not applicable” from “missing”; not every study requires identical declarations.
+- Assess journal fit against its actual scope and the manuscript's contribution. An “editor” role prompt provides a simulated perspective, not a real editorial decision or acceptance guarantee.
+- Keep cover letters concise about the question, actual contribution, and journal fit. Statements such as originality or approval by all authors require author confirmation; leave unconfirmed statements pending.
+- Record actual AI tools, known versions, purposes, affected sections, and author review faithfully. Do not misdescribe drafting, analysis, or image generation as language editing alone; do not invent versions. Apply the target journal's disclosure policy rather than hard-coding publisher rules.
 
-## 返修回复
+## Revision responses
 
-- 对外返修草稿逐条保留每条审稿意见的 `Reviewer/Comment` 标识、编号、完整原文和顺序；同一条中的每个子要求均原样保留并分别回应，不得省略未回应项。
-- 每条组织为：简短回应、实际采取的行动与理由、修改位置，必要时引用修改后文字。
-- 把“已完成修改”“拟修改”“不同意并说明依据”与“作者尚未决定”分开。只有作者明确计划才写拟修改；没有决定时将该项列为作者待办，同一条中已完成的部分照常起草。没有实际修订稿或作者说明，不能写成已经增加实验或完成分析。
-- 对外返修回复只写已有依据的完成事项、作者已明确决定的拟改或有据异议；作者尚未决定的事项、内部待办和未经授权的将来承诺放在正文外的作者待办/待确认中，不写入回复正文。同一条含已完成和未决要求时，正文先起草已完成部分，外部备注标出尚未覆盖项。
-- 合理异议用证据和设计边界解释；不套用网站示例中的样本量、功效分析、首创性或语言校对经历。
-- 页码和行号以最终修订稿为准；尚未定位时，外部回复可省略位置或使用“位置待最终修订稿确认”，不得写未经授权的将来承诺；是否补定位信息列作者待办。作者口述“已改”时注明所依据的说明，看到修订稿后再给可核对的位置。定稿时检查意见覆盖和回复与正文是否一致。
+- Preserve every comment's Reviewer/Comment identifier, number, full original wording, and order in the external-facing draft. Retain and address each sub-request separately, including any not yet answered.
+- For each comment, give a brief response, the actual action and reason, and the revision location; quote the revised text when useful.
+- Distinguish completed changes, planned changes, evidence-based disagreement, and matters the author has not decided. Describe a change as planned only when the author has explicitly planned it. Leave undecided items as author tasks while drafting the completed parts of the same comment. Without a revised manuscript or author account, do not claim that experiments were added or analyses completed.
+- In the external-facing response, include only evidenced completed work, explicitly decided plans, or supported disagreement. Keep undecided matters, internal tasks, and unauthorized future commitments outside that response in author tasks or confirmation notes. When a comment combines completed and undecided requests, draft the completed part and identify uncovered requests in a separate note.
+- Explain reasonable disagreement using evidence and design boundaries. Do not borrow sample sizes, power analyses, novelty claims, or language-editing histories from the website's examples.
+- Use page and line numbers from the final revised manuscript. If a location is not yet available, omit it from the external response or use “location pending confirmation against the final revised manuscript,” without making an unauthorized future commitment; leave whether to add location details as an author task. If the author verbally reports a change, identify that account as the basis; give a verifiable location after seeing the revised manuscript. At finalization, check comment coverage and consistency between the response and manuscript.
 
-## 输出
+## Output
 
-只交付用户需要的检查表、投稿信、披露声明或逐条回复。检查表使用“完成、缺失、待确认、不适用”。返修输出先保留完整的 `Reviewer/Comment` 意见（含未回应的子要求），再清楚分开对外回复草案与正文外的作者待办/待确认；未覆盖子要求必须显式列出。
+Deliver only the requested checklist, cover letter, disclosure, or point-by-point response. Use “complete,” “missing,” “pending confirmation,” and “not applicable” for checklist items. For revision responses, retain the full Reviewer/Comment text, including unanswered sub-requests, then clearly separate the external-facing draft from author tasks or confirmation notes. Explicitly identify uncovered sub-requests.
 
-## 调用例
+## Example requests
 
-“按这份作者指南检查投稿材料。”
-“根据审稿意见和这份修改记录写回复，没改的别写成改过了。”
+“Check these submission materials against the supplied author guidelines.”
+“Draft responses from the reviewer comments and this change log; do not claim unfinished changes are complete.”
 
-## 来源
+## Sources
 
-[投稿前清单](https://drshahizan.github.io/polishing-ai/checklist.html)、[返修信指南](https://drshahizan.github.io/polishing-ai/response-letter.html)、[披露生成器](https://drshahizan.github.io/polishing-ai/disclosure.html)、[提示词库 Submission、Review、Revision](https://drshahizan.github.io/polishing-ai/prompts.html)。网站政策摘要不能替代当前期刊官方政策。
+[Pre-submission checklist](https://drshahizan.github.io/polishing-ai/checklist.html), [response-letter guide](https://drshahizan.github.io/polishing-ai/response-letter.html), [disclosure generator](https://drshahizan.github.io/polishing-ai/disclosure.html), and [prompt library: Submission, Review, Revision](https://drshahizan.github.io/polishing-ai/prompts.html). The website's policy summaries do not replace current official journal policies.
+
+[中文参考版](https://github.com/XingjianTian/paper-polishing-skills/blob/main/docs/zh-CN/paper-submission-revision.md)

@@ -1,33 +1,35 @@
 ---
 name: paper-faithful-edit
-description: 对已有论文段落或摘要做保留含义的语言润色、压缩或翻译；按明确授权和可核对依据纠正事实，核对术语、数字、否定和结论强度；不扩写研究内容。
+description: Polish, shorten, or translate existing paper passages or abstracts while preserving meaning. Correct facts only with explicit authorization and verifiable evidence; preserve terminology, numbers, negation, and claim strength. Do not expand the research content.
 ---
 
-# 论文忠实润色
+# Faithful Paper Editing
 
-一次解决用户提出的问题：语法、清晰度、字数、翻译或语气。不要自动叠加结构重写、模拟审稿和投稿检查。
+Address the requested issue: grammar, clarity, length, translation, or tone. Do not automatically add structural rewriting, simulated peer review, or submission checks.
 
-## 执行
+## Approach
 
-- 普通拼写、语法、标点和明显格式问题可直接改；数字、单位、分组、否定、构念或结论强度属于事实或含义，只有用户明确授权纠正且提供明确依据时才改。否则以原文和用户提供的数据为依据，锁定构念名、技术术语、数值、单位、引用及研究范围；英文拼写按用户或期刊要求统一，缺省沿用原文主要变体。
-- 语言润色不得新增论点、文献、结果或方法。对歧义或冲突，用户允许附说明时另列待确认；用户仅要正文且可以忠实保留原义时，正文不插标记，保留原文事实。若翻译必须在两种相反含义中择一，只询问该处，避免猜测修正。
-- 当用户同时委托核查和润色时，润色仅沿用原语言和原主张；证据判断、待核主张和需补充材料另列，不把待核疑点改写成关于“被引用”或“有研究报告”的新主张。
-- 引用中的英文作者名、题名或 DOI 不构成翻译授权；原文为中文时默认交付中文，除非用户明确要求翻译。例：只润色“Example（2025）有力地证明……”仍交付中文句。
-- 逐句回查：否定是否保留；“无显著差异”是否被改成“差异很小”；“意愿”是否变成“行为”；关联是否变成因果；样本范围是否扩大；百分比是否被错误概括。
-- 区分统计显著性、效应大小和实际意义。不能把不显著改成没有效应，也不能凭显著性宣称重要。
-- 删除空泛夸饰、套话和机械重复，但不得因此削弱或增强原主张强度；不依据禁词表一刀切。保留学科固定用语和作者有意义的句式。
-- 对摘要先检查背景、问题、方法、主要结果、结论的必要信息，再按实际字数要求压缩。缺少结果时提示作者补充，不补造。
-- 若用户只要润色，不因潜在结构问题大规模重排。只在必要时附简短说明。
+- Correct ordinary spelling, grammar, punctuation, and obvious formatting directly. Numbers, units, groups, negation, constructs, and claim strength carry facts or meaning: change them only when the user explicitly authorizes correction and supplies a clear basis. Otherwise, use the original text and user-supplied data as the basis, preserving construct names, technical terms, values, units, citations, and study scope. Follow the user or journal's English spelling convention; by default retain the original's predominant variant.
+- Do not add claims, references, results, or methods while editing language. If notes are allowed, list ambiguities or conflicts separately for confirmation. If the user wants only the edited text and its meaning can be faithfully retained, preserve the original facts without inserting markers. If translation requires choosing between opposite meanings, ask only about that passage rather than guessing a correction.
+- When both checking and editing are requested, retain the original language and claims in the edited text. Put evidence judgments, unresolved claims, and required source material separately. Do not turn an unresolved claim into a new statement about a work “being cited” or “reporting” something.
+- English author names, titles, or DOIs in a citation do not authorize translation. Keep Chinese source text in Chinese unless translation is explicitly requested. For example, editing “Example（2025）有力地证明……” still calls for a Chinese sentence. The language of these instructions does not override the source language or the user's request.
+- Check sentence by sentence: is negation retained? Has “no significant difference” become “a small difference”? Has “intention” become “behavior”? Has association become causation? Has the sample scope expanded? Have percentages been inaccurately summarized?
+- Distinguish statistical significance, effect size, and practical importance. Do not turn a nonsignificant result into “no effect,” or claim importance from significance alone.
+- Remove empty embellishment, stock phrases, and mechanical repetition without weakening or strengthening the original claim. Do not apply a blanket banned-word list. Preserve established disciplinary terms and meaningful authorial phrasing.
+- For an abstract, first check the necessary background, question, methods, main results, and conclusion; then shorten to the actual word limit. Ask the author to supply missing results rather than inventing them.
+- If only polishing is requested, do not extensively rearrange the text because of potential structural issues. Add a short note only when necessary.
 
-## 输出
+## Output
 
-提供修改稿；附少量涉及含义、术语或证据强度的重要修改说明。用户要求仅给正文时遵从；仅要正文且可保留原义时不在正文插入歧义标记，无法在相反含义间保真翻译时先询问该处。若同时有核查任务，核查结论与最小补件另列，不将待核疑点写入修改稿。说明是否满足字数要求；没有实际计数不得声称精确达标。
+Provide the edited text, with a few notes on consequential changes to meaning, terminology, or evidence strength. Honor text-only requests. When the original meaning can be retained, do not insert ambiguity markers into a text-only answer; ask about a passage first if faithful translation cannot choose between opposite meanings. If checking is also requested, list the findings and minimum missing material separately rather than inserting unresolved concerns into the edited text. State whether the word limit is met; do not claim an exact count without actually counting.
 
-## 调用例
+## Example requests
 
-“润色这段英文，不改技术术语、引用和数字。”
-“把摘要缩到 250 词，不能丢主要结果。”
+“Polish this English paragraph without changing technical terms, citations, or numbers.”
+“Shorten the abstract to 250 words without losing the main results.”
 
-## 来源
+## Sources
 
-[提示词库 W-01 至 W-03、Abstract、Discussion](https://drshahizan.github.io/polishing-ai/prompts.html)、[摘要修改案例](https://drshahizan.github.io/polishing-ai/example.html)、[常见错误](https://drshahizan.github.io/polishing-ai/pitfalls.html)。网站案例为虚构教学材料，不采用其中数字或引用作为研究事实。
+[Prompt library: W-01–W-03, Abstract, Discussion](https://drshahizan.github.io/polishing-ai/prompts.html), [abstract editing example](https://drshahizan.github.io/polishing-ai/example.html), and [common pitfalls](https://drshahizan.github.io/polishing-ai/pitfalls.html). The website's examples are fictional teaching material; do not adopt their numbers or citations as research facts.
+
+[中文参考版](https://github.com/XingjianTian/paper-polishing-skills/blob/main/docs/zh-CN/paper-faithful-edit.md)
